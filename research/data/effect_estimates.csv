@@ -1,0 +1,12 @@
+study,construct,estimate,lower,upper,metric,contrast,source_location,doi
+Batty2018,Neuroticism,1.33,1.18,1.50,HR,Per 1 SD higher trait; multiply adjusted,Main results paragraphs,10.1002/wps.20575
+Batty2018,Agreeableness,0.71,0.53,0.97,HR,Per 1 SD higher trait; multiply adjusted,Main results paragraphs,10.1002/wps.20575
+Batty2018,Extraversion,0.99,0.84,1.17,HR,Per 1 SD higher trait; multiply adjusted,Main results paragraphs,10.1002/wps.20575
+Batty2018,Conscientiousness,0.98,0.69,1.39,HR,Per 1 SD higher trait; multiply adjusted,Main results paragraphs,10.1002/wps.20575
+Batty2018,Openness,0.94,0.69,1.29,HR,Per 1 SD higher trait; multiply adjusted,Main results paragraphs,10.1002/wps.20575
+Yen2021,Identity disturbance,2.21,1.37,3.56,OR,Criterion present vs absent; simultaneous criteria model,Table 3 final model,10.1001/jamapsychiatry.2020.3598
+Yen2021,Chronic emptiness,1.63,1.03,2.57,OR,Criterion present vs absent; simultaneous criteria model,Table 3 final model,10.1001/jamapsychiatry.2020.3598
+Yen2021,Abandonment avoidance,1.93,1.17,3.16,OR,Criterion present vs absent; simultaneous criteria model,Table 3 final model,10.1001/jamapsychiatry.2020.3598
+Moore2022,Impulsivity,0.19,0.15,0.22,r,Random-effects pooled association; not common covariate-adjusted,Abstract and main findings,10.1016/j.eclinm.2022.101307
+Moore2022,Aggression,0.23,0.17,0.29,r,Random-effects pooled association; not common covariate-adjusted,Abstract and main findings,10.1016/j.eclinm.2022.101307
+Moore2022,Impulsive aggression,0.16,0.10,0.22,r,Random-effects pooled association; not common covariate-adjusted,Abstract and main findings,10.1016/j.eclinm.2022.101307

@@ -1,0 +1,26 @@
+{
+  "transport_sha256": "76ac0a59d68f7204d253afda70ff9d7243ecd8035cc0432aa494b518693dc789",
+  "transport_verified": true,
+  "files": {
+    "manuscript/seminar.fa.md": {
+      "bytes": 70239,
+      "sha256": "7f59e7090a140cfaf2035febbe3b74583a773005537724e9e190b13ca9d95f6f"
+    },
+    "scripts/build_seminar.py": {
+      "bytes": 19017,
+      "sha256": "7527f413738b7e1d2a1bffda704c7feeb6fad32f2da504f820a2ed656218a744"
+    },
+    "scripts/content_assets.py": {
+      "bytes": 22150,
+      "sha256": "fbb9ed4af3d2bff3fa8009a7344d07aec3e87568e4ec700472dc0b774263ca24"
+    },
+    "scripts/update_indexes.py": {
+      "bytes": 1974,
+      "sha256": "25eeeba4db01a592053bab7a68dc796409d1b0a15f10041533739637a100e5c3"
+    },
+    "research/data/effect_estimates.csv": {
+      "bytes": 1651,
+      "sha256": "f9220fef84f9585565964f8a93c111b9bb8df0ea8b0b66d5d380fefaa8b24a3d"
+    }
+  }
+}
