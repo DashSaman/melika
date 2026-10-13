@@ -1,0 +1,6 @@
+source_id,trait,outcome,effect_type,increment,estimate,ci95_lower,ci95_upper,model,source_url,source_locator,verification_status
+A01,neuroticism,suicide_mortality,HR,1_SD_higher,1.33,1.18,1.50,multiply_adjusted,https://pmc.ncbi.nlm.nih.gov/articles/PMC6127810/,paragraph_beginning_In_the_main_analyses,single_pass_checked_not_final
+A01,agreeableness,suicide_mortality,HR,1_SD_higher,0.71,0.53,0.97,multiply_adjusted,https://pmc.ncbi.nlm.nih.gov/articles/PMC6127810/,paragraph_beginning_In_the_main_analyses,single_pass_checked_not_final
+A01,extraversion,suicide_mortality,HR,1_SD_higher,0.99,0.84,1.17,multiply_adjusted,https://pmc.ncbi.nlm.nih.gov/articles/PMC6127810/,paragraph_beginning_After_dropping_data,single_pass_checked_not_final
+A01,conscientiousness,suicide_mortality,HR,1_SD_higher,0.98,0.69,1.39,multiply_adjusted,https://pmc.ncbi.nlm.nih.gov/articles/PMC6127810/,paragraph_beginning_After_dropping_data,single_pass_checked_not_final
+A01,openness,suicide_mortality,HR,1_SD_higher,0.94,0.69,1.29,multiply_adjusted,https://pmc.ncbi.nlm.nih.gov/articles/PMC6127810/,paragraph_beginning_After_dropping_data,single_pass_checked_not_final
