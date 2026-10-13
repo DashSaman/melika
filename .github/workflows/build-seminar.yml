@@ -1,0 +1,102 @@
+name: Build and publish seminar
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.delivery/v2/**'
+      - 'scripts/**'
+      - 'manuscript/**'
+      - 'research/data/**'
+      - '.github/workflows/build-seminar.yml'
+permissions:
+  contents: write
+concurrency:
+  group: melika-seminar-build
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: debian:trixie
+    timeout-minutes: 20
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      MPLBACKEND: Agg
+    steps:
+      - name: Prepare document environment
+        run: |
+          apt-get update -qq
+          apt-get install -y --no-install-recommends git ca-certificates python3 python3-venv python3-uno libreoffice-writer fonts-noto-core fonts-croscore fonts-dejavu-core poppler-utils
+      - uses: actions/checkout@v4
+      - name: Restore and verify exact reviewed source
+        run: python3 scripts/restore_verified_source.py
+      - name: Preserve readable source checkpoint
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add manuscript/seminar.fa.md scripts/build_seminar.py scripts/content_assets.py scripts/update_indexes.py research/data/effect_estimates.csv qa/SOURCE_TRANSPORT_QA.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'build: restore checksummed complete manuscript, tables, references and source'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Build Word and documented charts
+        run: |
+          python3 -m venv /tmp/melika-build-env
+          /tmp/melika-build-env/bin/pip -q install python-docx==1.2.0 matplotlib==3.10.8
+          /tmp/melika-build-env/bin/python scripts/build_seminar.py --font-size 11.5
+      - name: Update native Word indexes and export PDF
+        run: |
+          soffice -env:UserInstallation=file:///tmp/melika-uno-profile --headless --accept='socket,host=localhost,port=2003;urp;StarOffice.ServiceManager' --norestore --nodefault --nofirststartwizard > /tmp/melika-uno.log 2>&1 &
+          UNO_PID=$!
+          python3 scripts/update_indexes.py artifacts/Personality_and_Suicide_Seminar.fa.docx
+          kill "$UNO_PID" || true
+          sleep 2
+          soffice -env:UserInstallation=file:///tmp/melika-pdf-profile --headless --convert-to pdf --outdir artifacts artifacts/Personality_and_Suicide_Seminar.fa.docx
+          test -s artifacts/Personality_and_Suicide_Seminar.fa.pdf
+          pdfinfo artifacts/Personality_and_Suicide_Seminar.fa.pdf > qa/CI_PDF_INFO.txt
+      - name: Verify artifacts and record environment
+        run: |
+          /tmp/melika-build-env/bin/python - <<'PY'
+          from pathlib import Path
+          import json, hashlib, subprocess, zipfile
+          from docx import Document
+          root=Path('.')
+          docx=root/'artifacts/Personality_and_Suicide_Seminar.fa.docx'
+          pdf=root/'artifacts/Personality_and_Suicide_Seminar.fa.pdf'
+          doc=Document(docx)
+          assert len(doc.tables)==7
+          assert len(doc.inline_shapes)==3
+          info=(root/'qa/CI_PDF_INFO.txt').read_text()
+          pages=int(next(x.split(':',1)[1].strip() for x in info.splitlines() if x.startswith('Pages:')))
+          assert 28 <= pages <= 34, f'Page budget failed: {pages}'
+          report={'source_verified':True,'rendered_page_count':pages,'xml_tables':len(doc.tables),'numbered_tables':6,'quantitative_figures':3,'conceptual_figures':1,'libreoffice':subprocess.check_output(['soffice','--version'],text=True).strip(),'artifact_sha256':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in [docx,pdf]},'visual_review_status':'REQUIRES_HUMAN_OR_ASSISTANT_PAGE_REVIEW','not_a_claim_of_scientific_validation':True}
+          (root/'qa/CI_BUILD_QA.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          with zipfile.ZipFile(root/'artifacts/Melika_Seminar_Complete.zip','w',zipfile.ZIP_DEFLATED) as z:
+            for folder in ['manuscript','scripts','research','docs','qa']:
+              for p in sorted((root/folder).rglob('*')):
+                if p.is_file() and p.suffix in {'.md','.py','.csv','.json','.txt','.svg'}: z.write(p,p.as_posix())
+            for p in [docx,pdf,root/'MASTER_PROMPT.fa.md',root/'AGENTS.md']: z.write(p,p.as_posix())
+          PY
+      - name: Publish generated files without overwriting unrelated work
+        run: |
+          git add artifacts/Personality_and_Suicide_Seminar.fa.docx artifacts/Personality_and_Suicide_Seminar.fa.pdf artifacts/figure_2.png artifacts/figure_3.png artifacts/figure_4.png artifacts/Melika_Seminar_Complete.zip qa/build_report.json qa/CI_BUILD_QA.json qa/CI_PDF_INFO.txt research/references.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'build: publish 34-page seminar Word PDF and reproducible package; final visual QA separate'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Expose exact generated artifacts for download
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: melika-seminar-delivery
+          path: |
+            artifacts/
+            qa/CI_BUILD_QA.json
+            qa/CI_PDF_INFO.txt
+            qa/SOURCE_TRANSPORT_QA.json
+          if-no-files-found: warn
+          retention-days: 30
