@@ -28,5 +28,7 @@
   "similarity_software_test":"NOT_PERFORMED",
   "independent_external_peer_review":"NOT_PERFORMED",
   "cover_identity_fields":"TO_BE_FILLED_BY_STUDENT",
-  "reviewer":"Assistant; source-based and visual review, not institutional approval"
+  "reviewer":"Assistant; source-based and visual review, not institutional approval",
+  "release_is_frozen":true,
+  "future_build_policy":"Manual review candidates only; no automatic replacement of approved Word/PDF"
 }

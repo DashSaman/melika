@@ -1,10 +1,12 @@
-# بازتولید و کنترل نسخه تحویلی
+# بازتولید و حفظ نسخه تحویلی
 
-مرجع محتوا: manuscript/seminar.fa.md و scripts/content_assets.py. محیط ساخت آزموده‌شده: Debian 13، LibreOffice 25.2.3.2، python-docx 1.2.0، matplotlib 3.10.8 و بسته‌های فونت Noto Core/Croscore/DejaVu. فایل قلم در مخزن توزیع نمی‌شود.
+## نسخه نهایی ثابت است
 
-## مسیر آماده
+Word و PDF تحویلی همان hashهای `qa/FINAL_QA.json` را دارند. برای جلوگیری از تغییر ناخواسته فایل‌های بازبینی‌شده، تغییر README یا سایر مستندات دیگر باعث بازتولید و جایگزینی خودکار آن‌ها نمی‌شود. گردش کار **Build seminar review candidate** فقط دستی اجرا می‌شود و خروجی را به‌صورت نامزد بازبینی در بخش Actions قرار می‌دهد؛ روی main منتشر نمی‌کند. پس از بازبینی واقعی نسخه تازه می‌توان آن را منتشر و QA را به‌روز کرد.
 
-در GitHub Actions، workflow «Build and publish seminar» را اجرا کنید. این گردش کار وابستگی‌ها را نصب، منبع خوانا را حفظ، رکورد منابع را صادر، DOCX را می‌سازد، فهرست‌ها را با UNO به‌روز و PDF را تولید می‌کند. خروجی و گزارش ساخت را روی شاخه main منتشر می‌کند. hash نسخه بازتولیدشده ممکن است به علت زمان/متادیتا متفاوت شود؛ تأیید نسخه تازه نیازمند QA است.
+## مواد ساخت
+
+مرجع متن `manuscript/seminar.fa.md`، جدول‌ها/منابع/چکیده `scripts/content_assets.py` و سازنده `scripts/build_seminar.py` است. محیط آزموده‌شده Debian 13، LibreOffice 25.2.3.2، python-docx 1.2.0 و matplotlib 3.10.8 است. قلم فارسی Noto Naskh Arabic و قلم لاتینِ جایگزین در PDF تحویلی Tinos است. هیچ فایل قلم در بسته منتشر نمی‌شود.
 
 ## ساخت محلی
 
@@ -17,8 +19,6 @@ python3 scripts/update_indexes.py artifacts/Personality_and_Suicide_Seminar.fa.d
 soffice -env:UserInstallation=file:///tmp/melika-export --headless --convert-to pdf --outdir artifacts artifacts/Personality_and_Suicide_Seminar.fa.docx
 ```
 
-Python سیستمی باید python3-uno داشته باشد؛ فونت‌ها و LibreOffice نیز لازم‌اند. در Word می‌توان همه متن را انتخاب و فهرست‌ها را با F9 به‌روز کرد. پس از ویرایش، تمام صفحات و تطبیق شماره‌ها بررسی شوند.
+Python سیستمی باید python3-uno داشته باشد و LibreOffice/فونت‌ها نصب باشند. فهرست‌های Word با انتخاب متن و F9 قابل‌به‌روزرسانی‌اند. پس از هر ویرایش، بازبینی ارجاعات، شماره‌ها، اعداد و همه صفحات لازم است؛ موفقیت ساخت به معنی تأیید علمی نیست.
 
-`restore_verified_source.py` فقط ابزار بازیابی bootstrap است، نه مرحله لازم هر ساخت. گردش کار از بازنویسی خودکار منابع خوانای جدید با bootstrap جلوگیری می‌کند. نمودارهای کمی از CSV با آماره‌های جداگانه ساخته شده‌اند؛ مقادیر آن‌ها بدون منبع تازه تغییر نکنند.
-
-گردش کار «Package final delivery» فقط بسته ZIP و فایل checksum را به‌روز می‌کند و Word/PDF بازبینی‌شده را تغییر نمی‌دهد. وجود SHA صحیح به‌تنهایی جایگزین بررسی علمی نیست.
+`restore_verified_source.py` ابزار بازیابی bootstrap است و روی منابع خوانای جدید اجرا نمی‌شود. نمودارها از CSV مستند ساخته شده‌اند و آماره‌های HR، OR و r جدا باقی می‌مانند. گردش کار **Package final delivery** فقط ZIP و checksum را همسان می‌کند؛ Word/PDF بازبینی‌شده را نمی‌سازد و تغییر نمی‌دهد.
