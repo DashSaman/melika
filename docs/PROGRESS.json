@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-13",
+  "checkpoint": "CP02-structure",
+  "metric": "weighted_verified_deliverables_not_scientific_confidence",
+  "overall_percent": 20,
+  "delivery_status": "NOT_READY",
+  "stages": [
+    {"id":"P1","weight":10,"earned":10,"status":"complete","evidence":["MASTER_PROMPT.fa.md"]},
+    {"id":"P2","weight":10,"earned":10,"status":"complete","evidence":["AGENTS.md","PROJECT_STATUS.md","WORK_LOG.md","docs/PLAN.fa.md","qa/REQUIREMENTS_CHECKLIST.md"]},
+    {"id":"P3","weight":20,"earned":0,"status":"pending","gates_completed":[],"evidence":[]},
+    {"id":"P4","weight":20,"earned":0,"status":"not_started","evidence":[]},
+    {"id":"P5","weight":20,"earned":0,"status":"not_started","evidence":[]},
+    {"id":"P6","weight":5,"earned":0,"status":"not_started","evidence":[]},
+    {"id":"P7","weight":10,"earned":0,"status":"not_started","evidence":[]},
+    {"id":"P8","weight":5,"earned":0,"status":"not_started","evidence":[]}
+  ],
+  "final_docx": null,
+  "final_pdf": null,
+  "rendered_page_count": null
+}
