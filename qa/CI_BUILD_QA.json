@@ -1,0 +1,15 @@
+{
+  "source_verified": true,
+  "rendered_page_count": 34,
+  "xml_tables": 7,
+  "numbered_tables": 6,
+  "quantitative_figures": 3,
+  "conceptual_figures": 1,
+  "libreoffice": "LibreOffice 25.2.3.2 520(Build:2)",
+  "artifact_sha256": {
+    "artifacts/Personality_and_Suicide_Seminar.fa.docx": "8bd8cd0c55c5d3efc7d97a5e700fe4c7a30f9621517f7453900b0e048968eb2e",
+    "artifacts/Personality_and_Suicide_Seminar.fa.pdf": "0a91ae722e8a968587ddb809f2897c7ee5c2aa23e70026cab456c7234625b7b5"
+  },
+  "visual_review_status": "REQUIRES_HUMAN_OR_ASSISTANT_PAGE_REVIEW",
+  "not_a_claim_of_scientific_validation": true
+}

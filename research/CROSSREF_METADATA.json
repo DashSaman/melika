@@ -1,0 +1,1248 @@
+{
+  "checked_at_utc": "2026-10-13T19:36:11.111920+00:00",
+  "purpose": "Bibliographic verification, not an independent scientific peer review",
+  "records": {
+    "Ahmad2023": {
+      "DOI": "10.1002/hsr2.1697",
+      "title": [
+        "A structural test of the three‐step theory (3ST) of suicide in the Iranian population: From ideation to action"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-4010-3496",
+          "authenticated-orcid": false,
+          "given": "Soliman",
+          "family": "Ahmadboukani",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Counseling, Faculty of Educational Sciences and Psychology University of Mohaghegh Ardabili  Ardabil Iran"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7016-3492",
+          "authenticated-orcid": false,
+          "given": "Hosein Ghamari",
+          "family": "Kivi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Counseling, Faculty of Educational Sciences and Psychology University of Mohaghegh Ardabili  Ardabil Iran"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1792-590X",
+          "authenticated-orcid": false,
+          "given": "Ahmadreza",
+          "family": "Kiani",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Counseling, Faculty of Educational Sciences and Psychology Shahid Beheshti University  Tehran Iran"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-3502-8575",
+          "authenticated-orcid": false,
+          "given": "Ali",
+          "family": "Rezaeisharif",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Counseling, Faculty of Educational Sciences and Psychology University of Mohaghegh Ardabili  Ardabil Iran"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Health Science Reports"
+      ],
+      "volume": "6",
+      "issue": "11",
+      "page": null,
+      "article-number": "e1697",
+      "published-print": {
+        "date-parts": [
+          [
+            2023,
+            11
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2023,
+            11,
+            17
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            11
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1002/hsr2.1697",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1002%2Fhsr2.1697",
+      "access_to_article": "Full publisher text; supplementary files not independently reanalysed"
+    },
+    "Batty2018": {
+      "DOI": "10.1002/wps.20575",
+      "title": [
+        "Personality traits and risk of suicide mortality: findings from a multi‐cohort study in the general population"
+      ],
+      "author": [
+        {
+          "given": "G. David",
+          "family": "Batty",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Epidemiology and Public Health University College  London UK"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Catharine R.",
+          "family": "Gale",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "MRC Lifecourse Epidemiology Unit University of Southampton  Southampton UK"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Fumiya",
+          "family": "Tanji",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Epidemiology Tohoku University School of Public Health  Sendai Japan"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "David",
+          "family": "Gunnell",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Social and Community Medicine, University of Bristol  Bristol UK"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Mika",
+          "family": "Kivimäki",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Epidemiology and Public Health University College  London UK"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Ichiro",
+          "family": "Tsuji",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Epidemiology Tohoku University School of Public Health  Sendai Japan"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Markus",
+          "family": "Jokela",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Psychology and Logopedics University of Helsinki  Helsinki Finland"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "World Psychiatry"
+      ],
+      "volume": "17",
+      "issue": "3",
+      "page": "371-372",
+      "article-number": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2018,
+            10
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2018,
+            9,
+            7
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            9,
+            7
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1002/wps.20575",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1002%2Fwps.20575",
+      "access_to_article": "Full research letter read; cohort details available on request not obtained"
+    },
+    "Bayrami1391": {
+      "status": "NO_DOI_IN_VERIFIED_RECORD",
+      "source": "https://mj.tbzmed.ac.ir/fa/Article/7750",
+      "access": "Publisher abstract and metadata only; PDF tables not accessed; no unverified coefficients reproduced"
+    },
+    "Dat2026": {
+      "DOI": "10.1016/j.jpsychires.2025.11.010",
+      "title": [
+        "Differences in personality traits among individuals with suicidal thoughts and behaviors and non-clinical populations: A systematic review and meta-analysis"
+      ],
+      "author": [
+        {
+          "given": "Nguyen Tan",
+          "family": "Dat",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0788-7690",
+          "authenticated-orcid": false,
+          "given": "Nobuyuki",
+          "family": "Mitsui",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Psychiatric Research"
+      ],
+      "volume": "193",
+      "issue": null,
+      "page": "49-65",
+      "article-number": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            2
+          ]
+        ]
+      },
+      "published-online": null,
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            2
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1016/j.jpsychires.2025.11.010",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1016%2Fj.jpsychires.2025.11.010",
+      "access_to_article": "Publisher/PubMed abstract; Crossref family=Dat, given=Nguyen Tan; print year 2026, online 2025"
+    },
+    "Franklin2017": {
+      "status": "LOOKUP_FAILED",
+      "error": "HTTP Error 429: Too Many Requests",
+      "request_url": "https://api.crossref.org/works/10.1037%2Fbul0000084",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/27841450/"
+    },
+    "Klonsky2016": {
+      "DOI": "10.1146/annurev-clinpsy-021815-093204",
+      "title": [
+        "Suicide, Suicide Attempts, and Suicidal Ideation"
+      ],
+      "author": [
+        {
+          "given": "E. David",
+          "family": "Klonsky",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Psychology, University of British Columbia, Vancouver, BC V6T 1Z4 Canada;"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alexis M.",
+          "family": "May",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Psychology, University of British Columbia, Vancouver, BC V6T 1Z4 Canada;"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Boaz Y.",
+          "family": "Saffer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Psychology, University of British Columbia, Vancouver, BC V6T 1Z4 Canada;"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Annual Review of Clinical Psychology"
+      ],
+      "volume": "12",
+      "issue": "1",
+      "page": "307-330",
+      "article-number": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2016,
+            3,
+            28
+          ]
+        ]
+      },
+      "published-online": null,
+      "published": {
+        "date-parts": [
+          [
+            2016,
+            3,
+            28
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1146/annurev-clinpsy-021815-093204",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1146%2Fannurev-clinpsy-021815-093204",
+      "access_to_article": "Abstract and publisher-indexed conceptual overview; citation metadata Crossref"
+    },
+    "Moore2022": {
+      "DOI": "10.1016/j.eclinm.2022.101307",
+      "title": [
+        "Impulsivity, aggression, and suicidality relationship in adults: A systematic review and meta-analysis"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-9463-3148",
+          "authenticated-orcid": false,
+          "given": "Fhionna R.",
+          "family": "Moore",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Heather",
+          "family": "Doughty",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tabea",
+          "family": "Neumann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Heather",
+          "family": "McClelland",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Claire",
+          "family": "Allott",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rory C.",
+          "family": "O'Connor",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "eClinicalMedicine"
+      ],
+      "volume": "45",
+      "issue": null,
+      "page": "101307",
+      "article-number": "101307",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            3
+          ]
+        ]
+      },
+      "published-online": null,
+      "published": {
+        "date-parts": [
+          [
+            2022,
+            3
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1016/j.eclinm.2022.101307",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1016%2Fj.eclinm.2022.101307",
+      "access_to_article": "Main publisher text through indexed full-text retrieval including methods/results; supplementary dataset not reanalysed"
+    },
+    "NICE2022": {
+      "status": "NO_DOI_IN_VERIFIED_RECORD",
+      "source": "https://www.nice.org.uk/guidance/ng225/chapter/recommendations",
+      "access": "Official recommendation section 1.6, especially 1.6.1–1.6.6"
+    },
+    "OConnor2018": {
+      "DOI": "10.1098/rstb.2017.0268",
+      "title": [
+        "The integrated motivational–volitional model of suicidal behaviour"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-3650-4994",
+          "authenticated-orcid": false,
+          "given": "Rory C.",
+          "family": "O'Connor",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Suicidal Behaviour Research Laboratory, Institute of Health &amp; Wellbeing, University of Glasgow, Gartnavel Royal Hospital, Glasgow G12 0XH, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Olivia J.",
+          "family": "Kirtley",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Contextual Psychiatry, Department of Neuroscience, KU Leuven, 3000 Leuven, Belgium"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Philosophical Transactions of the Royal Society B: Biological Sciences"
+      ],
+      "volume": "373",
+      "issue": "1754",
+      "page": "20170268",
+      "article-number": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2018,
+            9,
+            5
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2018,
+            7,
+            16
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            7,
+            16
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1098/rstb.2017.0268",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1098%2Frstb.2017.0268",
+      "access_to_article": "Theoretical model text/abstract via publisher and university record; no new causal verification claimed"
+    },
+    "Smith2018": {
+      "DOI": "10.1111/jopy.12333",
+      "title": [
+        "The perniciousness of perfectionism: A meta‐analytic review of the perfectionism–suicide relationship"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-4754-3032",
+          "authenticated-orcid": false,
+          "given": "Martin M.",
+          "family": "Smith",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Western Ontario"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Simon B.",
+          "family": "Sherry",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dalhousie University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Samantha",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Western Ontario"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Donald H.",
+          "family": "Saklofske",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Western Ontario"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Christopher",
+          "family": "Mushquash",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Lakehead University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gordon L.",
+          "family": "Flett",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "York University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Paul L.",
+          "family": "Hewitt",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of British Columbia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Personality"
+      ],
+      "volume": "86",
+      "issue": "3",
+      "page": "522-542",
+      "article-number": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2018,
+            6
+          ]
+        ]
+      },
+      "published-online": {
+        "date-parts": [
+          [
+            2017,
+            9,
+            4
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            9,
+            4
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1111/jopy.12333",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1111%2Fjopy.12333",
+      "access_to_article": "Publisher abstract; print issue June 2018 distinguishes online 2017"
+    },
+    "Soto2017": {
+      "DOI": "10.1037/pspp0000096",
+      "title": [
+        "The next Big Five Inventory (BFI-2): Developing and assessing a hierarchical model with 15 facets to enhance bandwidth, fidelity, and predictive power."
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-2875-8919",
+          "authenticated-orcid": false,
+          "given": "Christopher J.",
+          "family": "Soto",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Oliver P.",
+          "family": "John",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Journal of Personality and Social Psychology"
+      ],
+      "volume": "113",
+      "issue": "1",
+      "page": "117-143",
+      "article-number": null,
+      "published-print": null,
+      "published-online": {
+        "date-parts": [
+          [
+            2017,
+            7
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            7
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1037/pspp0000096",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1037%2Fpspp0000096",
+      "access_to_article": "Primary abstract and bibliographic record; no unpublished psychometric coefficients added"
+    },
+    "Heeringen2014": {
+      "DOI": "10.1016/s2215-0366(14)70220-2",
+      "title": [
+        "The neurobiology of suicide"
+      ],
+      "author": [
+        {
+          "given": "Kees",
+          "family": "van Heeringen",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "J John",
+          "family": "Mann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "The Lancet Psychiatry"
+      ],
+      "volume": "1",
+      "issue": "1",
+      "page": "63-72",
+      "article-number": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2014,
+            6
+          ]
+        ]
+      },
+      "published-online": null,
+      "published": {
+        "date-parts": [
+          [
+            2014,
+            6
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1016/s2215-0366(14)70220-2",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1016%2FS2215-0366%2814%2970220-2",
+      "access_to_article": "Primary abstract and metadata; used for theoretical stress-diathesis context only"
+    },
+    "VanOrden2010": {
+      "DOI": "10.1037/a0018697",
+      "title": [
+        "The interpersonal theory of suicide."
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-9439-401X",
+          "authenticated-orcid": false,
+          "given": "Kimberly A.",
+          "family": "Van Orden",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tracy K.",
+          "family": "Witte",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kelly C.",
+          "family": "Cukrowicz",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Scott R.",
+          "family": "Braithwaite",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Edward A.",
+          "family": "Selby",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas E.",
+          "family": "Joiner",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Psychological Review"
+      ],
+      "volume": "117",
+      "issue": "2",
+      "page": "575-600",
+      "article-number": null,
+      "published-print": null,
+      "published-online": {
+        "date-parts": [
+          [
+            2010
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2010
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1037/a0018697",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": true,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1037%2Fa0018697",
+      "access_to_article": "Primary conceptual account and abstract; theoretical propositions distinguished from causal findings"
+    },
+    "Yen2021": {
+      "DOI": "10.1001/jamapsychiatry.2020.3598",
+      "title": [
+        "Association of Borderline Personality Disorder Criteria With Suicide Attempts"
+      ],
+      "author": [
+        {
+          "given": "Shirley",
+          "family": "Yen",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Beth Israel Deaconess Medical Center, Massachusetts Mental Health Center, Harvard Medical School, Boston, Massachusetts"
+            },
+            {
+              "name": "Alpert Medical School, Brown University, Providence, Rhode Island"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jessica R.",
+          "family": "Peters",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Alpert Medical School, Brown University, Providence, Rhode Island"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shivani",
+          "family": "Nishar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Alpert Medical School, Brown University, Providence, Rhode Island"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Carlos M.",
+          "family": "Grilo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Yale Medical School, New Haven, Connecticut"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Charles A.",
+          "family": "Sanislow",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Wesleyan University, Middletown, Connecticut"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M. Tracie",
+          "family": "Shea",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Alpert Medical School, Brown University, Providence, Rhode Island"
+            },
+            {
+              "name": "Providence Veterans Affairs Medical Center, Providence, Rhode Island"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mary C.",
+          "family": "Zanarini",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "McLean Hospital, Harvard Medical School, Belmont, Massachusetts"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas H.",
+          "family": "McGlashan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Yale Medical School, New Haven, Connecticut"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Leslie C.",
+          "family": "Morey",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Texas A&M University, Phoenix, Arizona"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Andrew E.",
+          "family": "Skodol",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Arizona College of Medicine, Phoenix"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "JAMA Psychiatry"
+      ],
+      "volume": "78",
+      "issue": "2",
+      "page": "187",
+      "article-number": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            2,
+            1
+          ]
+        ]
+      },
+      "published-online": null,
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            2,
+            1
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1001/jamapsychiatry.2020.3598",
+      "status": "METADATA_RETRIEVED",
+      "title_matches": false,
+      "doi_matches": true,
+      "request_url": "https://api.crossref.org/works/10.1001%2Fjamapsychiatry.2020.3598",
+      "access_to_article": "Full publisher main text and Tables 1–3; online 2020, final issue 2021"
+    }
+  }
+}
