@@ -1,0 +1,84 @@
+name: Package final delivery
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'qa/FINAL_QA.md'
+      - 'qa/FINAL_QA.json'
+      - '.github/workflows/package-final.yml'
+permissions:
+  contents: write
+concurrency:
+  group: melika-final-package
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check reviewed artifacts and append final history
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json,zipfile
+          root=Path('.')
+          q=json.loads((root/'qa/FINAL_QA.json').read_text())
+          assert q['pages']==34 and len(q['visually_reviewed_pages'])==34
+          checks=[]
+          for name,expected in q['artifact_sha256'].items():
+            p=root/'artifacts'/name
+            actual=hashlib.sha256(p.read_bytes()).hexdigest()
+            assert actual==expected,(name,actual)
+            checks.append(f'{actual}  {name}')
+          (root/'artifacts/SHA256SUMS.txt').write_text('\n'.join(checks)+'\n')
+          log=root/'WORK_LOG.md'
+          text=log.read_text()
+          addition=(root/'qa/FINAL_LOG_ENTRY.md').read_text()
+          if 'CP05 — تحویل نهایی و کنترل واقعی' not in text:
+            log.write_text(text.rstrip()+'\n\n'+addition+'\n')
+          old=root/'research/SOURCE_LEDGER.md'
+          text=old.read_text()
+          pointer='> نسخه نهایی و سطح دسترسی ۱۴ منبع در [FINAL_SOURCE_LEDGER.md](FINAL_SOURCE_LEDGER.md) است. متن زیر سابقه نامزدهای CP03 است، نه فهرست نهایی.\n\n'
+          if not text.startswith('> نسخه نهایی'): old.write_text(pointer+text)
+          report={'reviewed_artifact_hashes_verified':True,'package_does_not_rebuild_docx_or_pdf':True,'pages':34}
+          (root/'qa/FINAL_PACKAGE_QA.json').write_text(json.dumps(report,indent=2))
+          with zipfile.ZipFile(root/'artifacts/Melika_Seminar_Complete.zip','w',zipfile.ZIP_DEFLATED) as z:
+            for folder in ['manuscript','scripts','research','docs','qa']:
+              for p in sorted((root/folder).rglob('*')):
+                if p.is_file() and p.suffix in {'.md','.py','.csv','.json','.txt','.svg'}: z.write(p,p.as_posix())
+            for name in ['README.md','MASTER_PROMPT.fa.md','AGENTS.md','PROJECT_STATUS.md','WORK_LOG.md','RESUME_PROMPT.fa.md']:
+              p=root/name
+              if p.is_file(): z.write(p,p.as_posix())
+            for p in sorted((root/'artifacts').iterdir()):
+              if p.is_file() and p.suffix in {'.docx','.pdf','.png','.txt','.md'}: z.write(p,p.as_posix())
+            for p in sorted((root/'.github/workflows').glob('*.yml')): z.write(p,p.as_posix())
+          with zipfile.ZipFile(root/'artifacts/Melika_Seminar_Complete.zip') as z:
+            assert z.testzip() is None
+            assert not any(Path(n).suffix.lower() in {'.ttf','.otf','.woff','.woff2'} for n in z.namelist())
+            for name,expected in q['artifact_sha256'].items():
+              assert hashlib.sha256(z.read('artifacts/'+name)).hexdigest()==expected
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Save final package and append-only history
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artifacts/Melika_Seminar_Complete.zip artifacts/SHA256SUMS.txt qa/FINAL_PACKAGE_QA.json WORK_LOG.md research/SOURCE_LEDGER.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'release: package reviewed seminar with final QA and preserved work history'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: melika-final-reviewed-delivery
+          path: |
+            artifacts/Melika_Seminar_Complete.zip
+            artifacts/Personality_and_Suicide_Seminar.fa.docx
+            artifacts/Personality_and_Suicide_Seminar.fa.pdf
+            artifacts/SHA256SUMS.txt
+            qa/FINAL_QA.md
+            qa/FINAL_QA.json
+          retention-days: 30
