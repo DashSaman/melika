@@ -1,21 +1,27 @@
 {
   "schema_version": 1,
   "as_of": "2026-10-13",
-  "checkpoint": "CP03-initial-research",
+  "checkpoint": "CP04-document-built-review-pending",
   "metric": "weighted_verified_deliverables_not_scientific_confidence",
-  "overall_percent": 25,
-  "delivery_status": "NOT_READY",
+  "overall_percent": 75,
+  "delivery_status": "BUILT_QA_AND_PUBLICATION_PENDING",
   "stages": [
-    {"id":"P1","weight":10,"earned":10,"status":"complete","evidence":["MASTER_PROMPT.fa.md"]},
-    {"id":"P2","weight":10,"earned":10,"status":"complete","evidence":["AGENTS.md","PROJECT_STATUS.md","WORK_LOG.md","docs/PLAN.fa.md","qa/REQUIREMENTS_CHECKLIST.md"]},
-    {"id":"P3","weight":20,"earned":5,"status":"in_progress","gates_completed":["P3.1"],"evidence":["research/SEARCH_PROTOCOL.md","research/SEARCH_LOG.md","research/SOURCE_LEDGER.md"]},
-    {"id":"P4","weight":20,"earned":0,"status":"not_started","evidence":[]},
-    {"id":"P5","weight":20,"earned":0,"status":"not_started","evidence":[]},
-    {"id":"P6","weight":5,"earned":0,"status":"not_started","evidence":[]},
-    {"id":"P7","weight":10,"earned":0,"status":"not_started","evidence":[]},
-    {"id":"P8","weight":5,"earned":0,"status":"not_started","evidence":[]}
+    {"id":"P1","weight":10,"earned":10,"status":"complete"},
+    {"id":"P2","weight":10,"earned":10,"status":"complete"},
+    {"id":"P3","weight":20,"earned":10,"status":"verification_in_progress"},
+    {"id":"P4","weight":20,"earned":20,"status":"draft_complete"},
+    {"id":"P5","weight":20,"earned":15,"status":"three_critiques_written_final_crosscheck_pending"},
+    {"id":"P6","weight":5,"earned":5,"status":"built"},
+    {"id":"P7","weight":10,"earned":5,"status":"built_full_visual_review_pending"},
+    {"id":"P8","weight":5,"earned":0,"status":"in_progress"}
   ],
+  "local_docx_sha256": "1564874dce02df0418ef4cfd1f632af0fafa10c25b974e1124688e7908fad7f8",
+  "rendered_page_count": 34,
+  "numbered_tables": 6,
+  "conceptual_figures": 1,
+  "quantitative_figures": 3,
+  "references_count": 14,
   "final_docx": null,
   "final_pdf": null,
-  "rendered_page_count": null
+  "repository_artifact_publication_verified": false
 }
