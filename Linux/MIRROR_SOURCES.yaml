@@ -1,0 +1,334 @@
+schema_version: 1
+research_date: '2026-10-17'
+# 27 source entries; not 27 independent providers and not verified production routes.
+# Source rows override defaults. The loader must apply defaults and validate URLs.
+# DOCUMENTED means published coverage, not a successful raw HTTP/in-Iran probe.
+defaults:
+  routing_enabled: false
+  permission_state: unreviewed
+  domestic_state: unverified
+  failure_domain: null
+  suite_map: {}
+  allow_http_signed_metadata: false
+  measurements:
+    raw_probe_at: null
+    vantage: null
+    http_status: null
+    tls_verified: null
+    range_verified: null
+    full_artifact_hash_verified: null
+    metadata_date: null
+    valid_until: null
+    bytes_retained: null
+    rate_limit: null
+    outage_test: not_run
+sources:
+  - id: arvan-ubuntu
+    provider: ArvanCloud
+    ecosystem: apt
+    base_url: https://mirror.arvancloud.ir/ubuntu/
+    allowed_hosts: [mirror.arvancloud.ir]
+    declared_type: mirror_completeness_unknown
+    coverage: [ubuntu-jammy, ubuntu-noble, ubuntu-resolute]
+    evidence_urls: [https://www.arvancloud.ir/fa/dev/linux-repository]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'HTTPS candidate; documentation also uses HTTP. Test exact suite/index/file.'
+  - id: iranserver-ubuntu
+    provider: IranServer
+    ecosystem: apt
+    base_url: https://mirror.iranserver.com/ubuntu/
+    allowed_hosts: [mirror.iranserver.com]
+    declared_type: mirror_completeness_unknown
+    coverage: [ubuntu-jammy, ubuntu-noble, ubuntu-resolute]
+    evidence_urls: [https://mirror.iranserver.com/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Do not copy insecure certificate/GPG-disabling examples from provider page.'
+  - id: mobinhost-ubuntu
+    provider: MobinHost
+    ecosystem: apt
+    base_url: https://mirror.mobinhost.com/ubuntu/
+    allowed_hosts: [mirror.mobinhost.com]
+    declared_type: directory_mirror
+    coverage: [ubuntu]
+    domestic_state: provider_claimed
+    evidence_urls: [https://mirror.mobinhost.com/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Provider states Tehran DC1; Ubuntu directory observed, no full artifact test.'
+  - id: iut-ubuntu
+    provider: Isfahan University of Technology
+    ecosystem: apt
+    base_url: https://repo.iut.ac.ir/repo/ubuntu/
+    allowed_hosts: [repo.iut.ac.ir]
+    declared_type: directory_mirror
+    coverage: [ubuntu]
+    evidence_urls: [https://repo.iut.ac.ir/repo/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'The /repo/ prefix is required. No measured freshness recorded.'
+  - id: shatel-debian
+    provider: Shatel
+    ecosystem: apt
+    base_url: http://mirror.shatel.ir/debian/
+    allowed_hosts: [mirror.shatel.ir]
+    allow_http_signed_metadata: true
+    suite_map:
+      trixie-security: http://mirror.shatel.ir/debian-security/
+      bookworm-security: http://mirror.shatel.ir/debian-security/
+    declared_type: mirror_completeness_unknown
+    coverage: [debian, debian-security]
+    evidence_urls: [https://mirror.shatel.ir/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Ubuntu coverage was not established. HTTP exception requires APT verification.'
+  - id: linuxmirrors-ubuntu
+    provider: LinuxMirrors.ir
+    ecosystem: apt
+    base_url: https://repo.linuxmirrors.ir/ubuntu/
+    allowed_hosts: [repo.linuxmirrors.ir]
+    declared_type: directory_mirror
+    coverage: [ubuntu]
+    evidence_urls: [https://repo.linuxmirrors.ir/ubuntu/, 'https://launchpad.net/ubuntu/+archivemirrors']
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'A cached official mirror-list status is not a current raw probe.'
+  - id: liara-ubuntu
+    provider: Liara
+    ecosystem: apt
+    base_url: http://linux-mirror.liara.ir/repository/ubuntu/
+    allowed_hosts: [linux-mirror.liara.ir]
+    allow_http_signed_metadata: true
+    suite_map:
+      noble-security: http://linux-mirror.liara.ir/repository/ubuntu-security/
+      jammy-security: http://linux-mirror.liara.ir/repository/ubuntu-security/
+      resolute-security: http://linux-mirror.liara.ir/repository/ubuntu-security/
+    declared_type: cache
+    coverage: [ubuntu, ubuntu-security]
+    domestic_state: provider_claimed
+    evidence_urls: [https://docs.liara.ir/mirrors/ubuntu/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Exact official archive/security mapping. File residency and retention unknown.'
+  - id: chabokan-portal
+    provider: Chabokan
+    ecosystem: catalog
+    base_url: https://mirror2.chabokan.net/
+    allowed_hosts: [mirror2.chabokan.net]
+    declared_type: caching_proxy_portal
+    coverage: [ubuntu, debian, pypi, npm, docker, composer, nuget, wordpress]
+    evidence_urls: [https://mirror2.chabokan.net/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Portal is not an APT base. Discover service-specific paths before adapter use.'
+  - id: runflare-portal
+    provider: Runflare
+    ecosystem: catalog
+    base_url: https://runflare.com/mirrors/
+    allowed_hosts: [runflare.com]
+    declared_type: mirror_service_portal
+    coverage: [developer-packages]
+    evidence_urls: [https://runflare.com/mirrors/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: '500 free requests per IP documented; reset period unknown. No automated load before review.'
+  - id: myket-portal
+    provider: Myket
+    ecosystem: catalog
+    base_url: https://maven.myket.ir/
+    allowed_hosts: [maven.myket.ir]
+    declared_type: developer_mirror_portal
+    coverage: [maven, gradle, android-sdk, flutter]
+    domestic_state: provider_claimed
+    evidence_urls: [https://maven.myket.ir/, https://maven.myket.ir/services/maven.html]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Service-specific URLs and artifact licenses must be checked.'
+  - id: hamravesh-ubuntu
+    provider: Hamravesh
+    ecosystem: apt
+    base_url: https://repo.hmirror.ir/ubuntu/
+    allowed_hosts: [repo.hmirror.ir]
+    declared_type: cache
+    coverage: [ubuntu]
+    evidence_urls: [https://hamravesh.com/blog/container-registry-mirroring-and-caching/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Root trailing-slash behavior and suite paths require raw tests.'
+  - id: hamdocker-hub
+    provider: Hamravesh
+    ecosystem: oci
+    base_url: https://hub.hamdocker.ir/
+    allowed_hosts: [hub.hamdocker.ir]
+    declared_type: container_cache
+    coverage: [dockerhub]
+    evidence_urls: [https://hamravesh.com/blog/container-registry-mirroring-and-caching/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Same provider as hmirror, not independent redundancy. OCI-specific adapter only.'
+  - id: oneplatform-portal
+    provider: 1Platform
+    ecosystem: catalog
+    base_url: https://mirror.1platform.net/
+    allowed_hosts: [mirror.1platform.net]
+    declared_type: mirror_service_portal
+    coverage: [linux, developer-packages]
+    evidence_urls: [https://mirror.1platform.net/]
+    evidence_status: DOCUMENTED
+    routing_enabled: false
+    notes: 'Domestic hosting not established. Displayed HTTP examples are not our tests.'
+  - id: aminidc-candidate
+    provider: AminIDC
+    ecosystem: discovery
+    base_url: http://mirror.aminidc.com/
+    allowed_hosts: [mirror.aminidc.com]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Discovery-only URL; HTTP not enabled for production.'
+  - id: kubarcloud-candidate
+    provider: KubarCloud
+    ecosystem: discovery
+    base_url: https://mirrors.kubarcloud.com/
+    allowed_hosts: [mirrors.kubarcloud.com]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'No usable endpoint verification in this research.'
+  - id: ito-portal-candidate
+    provider: ITO
+    ecosystem: discovery
+    base_url: https://repo-portal.ito.gov.ir/repo/
+    allowed_hosts: [repo-portal.ito.gov.ir]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Do not infer a second independent copy from another ITO hostname.'
+  - id: ito-repo-candidate
+    provider: ITO
+    ecosystem: discovery
+    base_url: https://repo.ito.gov.ir/
+    allowed_hosts: [repo.ito.gov.ir]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Path and current service need operator confirmation.'
+  - id: pardis-candidate
+    provider: Pardis
+    ecosystem: discovery
+    base_url: https://mirrors.pardisco.co/
+    allowed_hosts: [mirrors.pardisco.co]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Not declared offline merely because research fetch failed.'
+  - id: afranet-candidate
+    provider: Afranet
+    ecosystem: discovery
+    base_url: http://mirror.afranet.com/
+    allowed_hosts: [mirror.afranet.com]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Discovery only; inspect actual protocols and paths.'
+  - id: pishgaman-candidate
+    provider: Pishgaman
+    ecosystem: discovery
+    base_url: https://ubuntu.pishgaman.net/
+    allowed_hosts: [ubuntu.pishgaman.net]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Ubuntu-looking name does not verify archive root.'
+  - id: ferdowsi-cran-candidate
+    provider: Ferdowsi University
+    ecosystem: discovery
+    base_url: https://cran.um.ac.ir/
+    allowed_hosts: [cran.um.ac.ir]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'R/CRAN candidate; not an Ubuntu source.'
+  - id: zeroone-candidate
+    provider: 0-1 Cloud
+    ecosystem: discovery
+    base_url: https://mirror.0-1.cloud/
+    allowed_hosts: [mirror.0-1.cloud]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Coverage, country and retention unknown.'
+  - id: kimiahost-candidate
+    provider: KimiaHost
+    ecosystem: discovery
+    base_url: https://ubuntu-mirror.kimiahost.com/
+    allowed_hosts: [ubuntu-mirror.kimiahost.com]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Do not infer exact package path from domain.'
+  - id: digitalvps-candidate
+    provider: DigitalVPS
+    ecosystem: discovery
+    base_url: https://mirror.digitalvps.ir/ubuntu/
+    allowed_hosts: [mirror.digitalvps.ir]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Candidate path only; no raw sample verified.'
+  - id: sindad-candidate
+    provider: Sindad
+    ecosystem: discovery
+    base_url: https://ir.ubuntu.sindad.cloud/
+    allowed_hosts: [ir.ubuntu.sindad.cloud]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'The ir prefix is not geolocation evidence.'
+  - id: faraso-candidate
+    provider: Faraso
+    ecosystem: discovery
+    base_url: http://mirror.faraso.org/
+    allowed_hosts: [mirror.faraso.org]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'No production HTTP exception granted.'
+  - id: parsdev-candidate
+    provider: Parsdev
+    ecosystem: discovery
+    base_url: https://mirror.parsdev.com/
+    allowed_hosts: [mirror.parsdev.com]
+    declared_type: unknown
+    coverage: []
+    evidence_urls: [https://raw.githubusercontent.com/MiravaOrg/Mirava/main/mirrors_list.yaml]
+    evidence_status: UNVERIFIED
+    routing_enabled: false
+    notes: 'Discover specific service endpoints before enabling.'

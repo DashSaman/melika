@@ -1,0 +1,7 @@
+[
+  {"id":"arvan-ubuntu","url":"https://mirror.arvancloud.ir/ubuntu/dists/noble/InRelease","allowed_hosts":["mirror.arvancloud.ir"]},
+  {"id":"iranserver-ubuntu","url":"https://mirror.iranserver.com/ubuntu/dists/noble/InRelease","allowed_hosts":["mirror.iranserver.com"]},
+  {"id":"mobinhost-ubuntu","url":"https://mirror.mobinhost.com/ubuntu/dists/noble/InRelease","allowed_hosts":["mirror.mobinhost.com"]},
+  {"id":"iut-ubuntu","url":"https://repo.iut.ac.ir/repo/ubuntu/dists/noble/InRelease","allowed_hosts":["repo.iut.ac.ir"]},
+  {"id":"linuxmirrors-ubuntu","url":"https://repo.linuxmirrors.ir/ubuntu/dists/noble/InRelease","allowed_hosts":["repo.linuxmirrors.ir"]}
+]

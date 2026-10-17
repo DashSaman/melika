@@ -1,0 +1,23 @@
+test_probe_implementation_exists (test_probe_sources.DeliveryTest.test_probe_implementation_exists) ... ok
+test_absent_vs_unknown (test_probe_sources.ProbeTests.test_absent_vs_unknown) ... ok
+test_credentials_rejected (test_probe_sources.ProbeTests.test_credentials_rejected) ... ok
+test_disallowed_host (test_probe_sources.ProbeTests.test_disallowed_host) ... ok
+test_dns_public_result (test_probe_sources.ProbeTests.test_dns_public_result) ... ok
+test_html_is_not_artifact (test_probe_sources.ProbeTests.test_html_is_not_artifact) ... ok
+test_http_requires_opt_in (test_probe_sources.ProbeTests.test_http_requires_opt_in) ... ok
+test_invalid_range (test_probe_sources.ProbeTests.test_invalid_range) ... ok
+test_mixed_dns_rejected (test_probe_sources.ProbeTests.test_mixed_dns_rejected) ... ok
+test_nonstandard_port_rejected (test_probe_sources.ProbeTests.test_nonstandard_port_rejected) ... ok
+test_pgp_prefix_is_not_signature_verification (test_probe_sources.ProbeTests.test_pgp_prefix_is_not_signature_verification) ... ok
+test_private_and_special_addresses (test_probe_sources.ProbeTests.test_private_and_special_addresses) ... ok
+test_query_rejected (test_probe_sources.ProbeTests.test_query_rejected) ... ok
+test_range_ignored (test_probe_sources.ProbeTests.test_range_ignored) ... ok
+test_redirect_is_not_followed_or_verified (test_probe_sources.ProbeTests.test_redirect_is_not_followed_or_verified) ... ok
+test_traversal_rejected (test_probe_sources.ProbeTests.test_traversal_rejected) ... ok
+test_valid_https (test_probe_sources.ProbeTests.test_valid_https) ... ok
+test_valid_range (test_probe_sources.ProbeTests.test_valid_range) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.004s
+
+OK
