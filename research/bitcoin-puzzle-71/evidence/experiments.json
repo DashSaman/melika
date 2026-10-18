@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "run_label": "CP01",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "gpu_device_nodes_detected": [],
+  "gpu_benchmark_executed": false,
+  "native_optimized_benchmark_executed": false,
+  "dataset_sha256": "476528c337fedf9963a642c175bddd04cfd5b09bfb9421ce5e7b2373d85d2e57",
+  "fixture_validation": {
+    "matched": 83,
+    "seconds": 0.12068095500001164
+  },
+  "independent_backend": {
+    "available": true,
+    "version": "46.0.4",
+    "public_keys_matched": 83,
+    "scope": "independent curve backend; address hashing checked against published fixtures"
+  },
+  "small_recoveries": [
+    {
+      "puzzle": 8,
+      "success": true,
+      "candidates_checked": 97,
+      "seconds": 0.0019935299999360723,
+      "public_historical_fixture": true
+    },
+    {
+      "puzzle": 12,
+      "success": true,
+      "candidates_checked": 636,
+      "seconds": 0.011633354999958101,
+      "public_historical_fixture": true
+    },
+    {
+      "puzzle": 16,
+      "success": true,
+      "candidates_checked": 18743,
+      "seconds": 0.3414566510000441,
+      "public_historical_fixture": true
+    }
+  ],
+  "reference_python_benchmark": {
+    "candidates_per_run": 4096,
+    "keys_per_second_runs": [
+      57723.20892677587,
+      54110.96997397979,
+      51927.454303744795
+    ],
+    "median_keys_per_second": 54110.96997397979,
+    "scope": "affine incremental CPU Python; not a CUDA or native-performance estimate"
+  },
+  "pattern_diagnostics": {
+    "sample_size": 63,
+    "replicates": 10000,
+    "seed": 71,
+    "protocol": "exploratory; observed data available before protocol freeze; three tests",
+    "tests": [
+      {
+        "name": "absolute_mean_minus_half",
+        "statistic": 0.027959071628734455,
+        "p_mc": 0.44195580441955806,
+        "p_bonferroni": 1.0
+      },
+      {
+        "name": "uniform_ecdf_distance",
+        "statistic": 0.10157522417250131,
+        "p_mc": 0.5092490750924907,
+        "p_bonferroni": 1.0
+      },
+      {
+        "name": "absolute_lag1_correlation",
+        "statistic": 0.08591489068531051,
+        "p_mc": 0.5056494350564944,
+        "p_bonferroni": 1.0
+      }
+    ]
+  },
+  "hypothetical_rates_not_benchmarks": {
+    "1000000": {
+      "sweep_seconds": 1180591620717411.2,
+      "without_replacement_mean_seconds": 590295810358705.6,
+      "replacement_median_seconds": 818323753292969.9
+    },
+    "100000000": {
+      "sweep_seconds": 11805916207174.113,
+      "without_replacement_mean_seconds": 5902958103587.057,
+      "replacement_median_seconds": 8183237532929.699
+    },
+    "1000000000": {
+      "sweep_seconds": 1180591620717.4114,
+      "without_replacement_mean_seconds": 590295810358.7057,
+      "replacement_median_seconds": 818323753292.97
+    }
+  },
+  "target_hash160": "f6f5431d25bbf7b12e8add9af5e3475c44a0a5b8",
+  "probe71": {
+    "executed": true,
+    "found": false,
+    "candidates_checked": 4096,
+    "counted_as_coverage": 4096,
+    "start_hex": "400000000000000000",
+    "stop_exclusive_hex": "400000000000001000",
+    "seconds": 0.0748251169999321,
+    "fraction_of_full_interval": 3.469446951953614e-18
+  },
+  "puzzle71_solved": false,
+  "transaction_constructed": false,
+  "transaction_signed": false,
+  "transaction_broadcast": false,
+  "paid_resources_used": false
+}

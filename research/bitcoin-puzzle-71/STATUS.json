@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "checkpoint": "CP01",
+  "session_date": "2026-10-18",
+  "canonical_directory": "research/bitcoin-puzzle-71",
+  "previous_head": "41ff401c1b3a3b17406b74b476c6ce80b67ff9da",
+  "research_checkpoint": "bounded_validation_complete; larger research gated",
+  "puzzle71_solved": false,
+  "target": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+  "target_hash160": "f6f5431d25bbf7b12e8add9af5e3475c44a0a5b8",
+  "range_start_hex": "400000000000000000",
+  "range_stop_exclusive_hex": "800000000000000000",
+  "width_decimal": "1180591620717411303424",
+  "verified_public_key": null,
+  "user_receiving_address_supplied": false,
+  "transaction_constructed": false,
+  "transaction_signed": false,
+  "transaction_broadcast": false,
+  "paid_resources_used": false,
+  "background_jobs": false,
+  "tests": {
+    "passed": 27,
+    "failed": 0,
+    "scope": "new isolated research module"
+  },
+  "published_fixture_pairs_validated": 83,
+  "independent_curve_crosschecks": 83,
+  "probe71": {
+    "distinct_candidates": 4096,
+    "found": false,
+    "start_hex": "400000000000000000",
+    "stop_exclusive_hex": "400000000000001000"
+  },
+  "chain_status": "reported_unspent_freshness_unresolved",
+  "reported_balance_sats": 710192391,
+  "complete_utxo_inventory_verified": false,
+  "krackpot_source_audited": false,
+  "gpu_benchmarked": false,
+  "native_optimized_cpu_benchmarked": false,
+  "prospective_prediction_verified": false,
+  "phase_status": {
+    "1_verification": "partial: address/range/responses checked; freshness and full inventory open",
+    "2_historical_research": "partial: 83 pairs and exploratory diagnostics; no generator or predictive edge",
+    "3_strategy": "conditional methods and probability model; real scaled costs not quoted",
+    "4_implementation": "bounded reference and tests executed; production solver not built",
+    "5_reward": "not applicable: no solution, no receiving address, no asset transfer",
+    "6_handoff": "checkpoint persisted in Git; read back commit objects before claiming delivery"
+  },
+  "next_gate": "Fresh chain-tip-bound UTXO reconciliation and attributable public-key/generator evidence before scaling."
+}

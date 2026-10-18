@@ -1,0 +1,32 @@
+test_addresses_known (test_research.ResearchTests.test_addresses_known) ... ok
+test_bad_address (test_research.ResearchTests.test_bad_address) ... ok
+test_bad_multiply (test_research.ResearchTests.test_bad_multiply) ... ok
+test_bad_scalar (test_research.ResearchTests.test_bad_scalar) ... ok
+test_chain_summary_rejects_missing_and_inconsistent (test_research.ResearchTests.test_chain_summary_rejects_missing_and_inconsistent) ... ok
+test_chain_summary_rejects_wrong_address (test_research.ResearchTests.test_chain_summary_rejects_wrong_address) ... ok
+test_chain_summary_valid (test_research.ResearchTests.test_chain_summary_valid) ... ok
+test_compress_infinity (test_research.ResearchTests.test_compress_infinity) ... ok
+test_double (test_research.ResearchTests.test_double) ... ok
+test_encode_bad_length (test_research.ResearchTests.test_encode_bad_length) ... ok
+test_fixture_count_and_ranges (test_research.ResearchTests.test_fixture_count_and_ranges) ... ok
+test_identity (test_research.ResearchTests.test_identity) ... ok
+test_incremental_path (test_research.ResearchTests.test_incremental_path) ... ok
+test_inverse_point (test_research.ResearchTests.test_inverse_point) ... ok
+test_order (test_research.ResearchTests.test_order) ... ok
+test_probabilities_small (test_research.ResearchTests.test_probabilities_small) ... ok
+test_probability_bad_inputs (test_research.ResearchTests.test_probability_bad_inputs) ... ok
+test_public_key_vector (test_research.ResearchTests.test_public_key_vector) ... ok
+test_range_exact (test_research.ResearchTests.test_range_exact) ... ok
+test_roundtrip_target (test_research.ResearchTests.test_roundtrip_target) ... ok
+test_scan_hit_first (test_research.ResearchTests.test_scan_hit_first) ... ok
+test_scan_hit_last (test_research.ResearchTests.test_scan_hit_last) ... ok
+test_scan_no_hit (test_research.ResearchTests.test_scan_no_hit) ... ok
+test_scan_rejects_bad_interval (test_research.ResearchTests.test_scan_rejects_bad_interval) ... ok
+test_statistics_deterministic (test_research.ResearchTests.test_statistics_deterministic) ... ok
+test_tiny_probability_nonzero (test_research.ResearchTests.test_tiny_probability_nonzero) ... ok
+test_wrong_network (test_research.ResearchTests.test_wrong_network) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.119s
+
+OK

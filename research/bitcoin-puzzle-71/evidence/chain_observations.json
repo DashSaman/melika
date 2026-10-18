@@ -1,0 +1,81 @@
+{
+  "session_date": "2026-10-18",
+  "transport": "Parallel_Search web_fetch; allow_live_fetch=true",
+  "source_response_timestamps": null,
+  "raw_http_bytes_captured": false,
+  "synchronized": false,
+  "status": "reported_unspent_freshness_unresolved",
+  "providers": [
+    {
+      "address_url": "https://mempool.space/api/address/1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+      "separate_tip_url": "https://mempool.space/api/blocks/tip/height",
+      "separate_tip_height": 971828,
+      "response": {
+        "address": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+        "chain_stats": {
+          "funded_txo_count": 70,
+          "funded_txo_sum": 710192391,
+          "spent_txo_count": 0,
+          "spent_txo_sum": 0,
+          "tx_count": 70
+        },
+        "mempool_stats": {
+          "funded_txo_count": 0,
+          "funded_txo_sum": 0,
+          "spent_txo_count": 0,
+          "spent_txo_sum": 0,
+          "tx_count": 0
+        }
+      }
+    },
+    {
+      "address_url": "https://blockstream.info/api/address/1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+      "separate_tip_url": "https://blockstream.info/api/blocks/tip/height",
+      "separate_tip_height": 971685,
+      "response": {
+        "address": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+        "chain_stats": {
+          "funded_txo_count": 70,
+          "funded_txo_sum": 710192391,
+          "spent_txo_count": 0,
+          "spent_txo_sum": 0,
+          "tx_count": 70
+        },
+        "mempool_stats": {
+          "funded_txo_count": 0,
+          "funded_txo_sum": 0,
+          "spent_txo_count": 0,
+          "spent_txo_sum": 0,
+          "tx_count": 0
+        }
+      }
+    }
+  ],
+  "tip_height_difference": 143,
+  "utxo_inventory_complete": false,
+  "utxo_examples_only": [
+    {
+      "txid": "8d99b7667ac8f865b33da5cdda4683aadb8728c36fcb33a96cec34630ddc405c",
+      "vout": 0,
+      "value_sats": 1000,
+      "confirmed": true,
+      "block_height": 963626,
+      "block_time": 1787426720
+    },
+    {
+      "txid": "08389f34c98c606322740c0be6a7125d9860bb8d5cb182c02f98461e5fa6cd15",
+      "vout": 70,
+      "value_sats": 7100000,
+      "confirmed": true,
+      "block_height": 339085,
+      "block_time": 1421345234
+    }
+  ],
+  "limitations": [
+    "tip endpoints fetched separately from address endpoints",
+    "responses may be stale or cached; cause not established",
+    "UTXO extraction truncated; only two complete examples retained",
+    "mempool tip hash not authenticated to reported height; omitted as chain anchor",
+    "no full-node validation or exhaustive transaction-history scan"
+  ]
+}

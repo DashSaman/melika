@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+local/
+private/
+secret*
+*.wif
+*.psbt
+*signed*
+*.pem
+candidate.txt
