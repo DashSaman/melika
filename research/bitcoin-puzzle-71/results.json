@@ -1,0 +1,21 @@
+{
+  "target": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+  "version": 0,
+  "hash160": "f6f5431d25bbf7b12e8add9af5e3475c44a0a5b8",
+  "range_start_hex": "0x400000000000000000",
+  "range_end_hex": "0x7fffffffffffffffff",
+  "keyspace": "1180591620717411303424",
+  "hypothetical_rate_keys_per_second": 250000000,
+  "365_day_success_probability": 0.000006678007756152904,
+  "365_day_success_percentage": 0.0006678007756152904,
+  "synthetic_null_control": {
+    "seed": 20261018,
+    "trials": 3000,
+    "training_per_trial": 60,
+    "holdout_per_trial": 20,
+    "observed": 0.25135,
+    "baseline": 0.25,
+    "z": 0.7636753236814814
+  },
+  "note": "Output from equivalent local Python audit; full solved-key blind test not performed."
+}
