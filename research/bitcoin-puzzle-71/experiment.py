@@ -7,7 +7,7 @@ def decode_address(s):
  n=0
  for c in s:n=n*58+A.index(c)
  b=n.to_bytes((n.bit_length()+7)//8,'big')
- b=b'\\0'*(len(s)-len(s.lstrip('1')))+b
+ b=bytes([0])*(len(s)-len(s.lstrip('1')))+b
  assert len(b)==25
  assert hashlib.sha256(hashlib.sha256(b[:-4]).digest()).digest()[:4]==b[-4:]
  return b[0],b[1:21].hex()
